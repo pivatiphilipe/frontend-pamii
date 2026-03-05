@@ -1,0 +1,19 @@
+import './HomePage.css'
+import { createHeader } from '../../shared/Header.js'
+
+const pageName = 'home';
+
+class HomePage extends HTMLElement {
+    connectedCallback() {
+        this.classList.add('ion-page');
+        const cabecalho = createHeader(pageName);
+        this.innerHTML = `
+            ${cabecalho}
+            <div class="container"> 
+                
+            </div>
+        `;
+    }
+}
+
+customElements.define('home-page', HomePage);
